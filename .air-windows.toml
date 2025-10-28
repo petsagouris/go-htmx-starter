@@ -3,7 +3,7 @@ tmp_dir = "tmp"
 
 [build]
 bin = "./tmp/main"
-cmd = "go build -o ./tmp/main ."
+cmd = "go build -o ./tmp/main.exe ."
 pre_cmd = ["templ generate"]
 # delay = 100
 env = [

@@ -2,7 +2,9 @@
 	"name": "go-htmx-starter",
 	"type": "module",
 	"scripts": {
-		"dev": "DEV=true concurrently \"air\" \"vite\"",
+		"dev": "run-script-os",
+		"dev:windows": "cross-env DEV=true concurrently \"air -c air-windows.toml\" \"vite\"",
+		"dev:default": "cross-env DEV=true concurrently \"air\" \"vite\"",
 		"build": "vite build",
 		"preview": "vite preview"
 	},
@@ -21,6 +23,8 @@
 	},
 	"dependencies": {
 		"concurrently": "^9.2.1",
-		"htmx.org": "^2.0.8"
+		"cross-env": "^10.1.0",
+		"htmx.org": "^2.0.8",
+		"run-script-os": "^1.1.6"
 	}
 }
